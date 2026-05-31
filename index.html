@@ -645,7 +645,7 @@ function toggleScrollSync() {
   scrollSync = !scrollSync;
   const btn = document.getElementById('sync-btn');
   btn.classList.toggle('on', scrollSync);
-  btn.textContent = scrollSync ? '⇅ 스크롤 ON' : '⇅ 스크롤';
+  btn.textContent = scrollSync ? '⇅ 스크롤' : '⇅ 스크롤';
 }
 function makeSyncHandler(src, tgt) {
   return function() {
