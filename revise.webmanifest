@@ -1,9 +1,9 @@
 {
-  "name": "퇴고",
-  "short_name": "퇴고",
+  "name": "REVISE",
+  "short_name": "REVISE",
   "description": "Original / Revised 듀얼 에디터",
   "start_url": "./",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#1c2028",
   "theme_color": "#1c2028",
   "orientation": "landscape",
