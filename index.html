@@ -173,7 +173,7 @@ body.chalkboard .pane-header{background:rgba(0,0,0,0.10);}
   <!-- 왼쪽: Original -->
   <span class="lbl">Original</span>
   <button class="tb-btn" onclick="triggerFileLoad('old')">불러오기</button>
-  <button class="tb-btn" onclick="clearPane('old')">Clear</button>
+  <button class="tb-btn" onclick="clearPane('old')">비우기</button>
 
   <div class="tb-spacer"></div>
 
@@ -183,9 +183,9 @@ body.chalkboard .pane-header{background:rgba(0,0,0,0.10);}
   <div class="sep"></div>
   <button class="tb-btn" id="sync-btn" onclick="toggleScrollSync()">⇅ 스크롤</button>
   <div class="sep"></div>
-  <button class="tb-btn" onclick="openSaveModal()">저장</button>
+  <button class="tb-btn" onclick="openSaveModal()">파일 관리</button>
   <div class="sep"></div>
-  <button class="tb-btn" id="space-btn" onclick="toggleSpaceCount()">공백 제외</button>
+  <button class="tb-btn" id="space-btn" onclick="toggleSpaceCount()">자수 설정</button>
   <div class="sep"></div>
 
   <!-- 글꼴 드롭다운 -->
@@ -236,7 +236,7 @@ body.chalkboard .pane-header{background:rgba(0,0,0,0.10);}
 
   <!-- 오른쪽: Revised (Load/Clear 먼저, 레이블 맨 끝) -->
   <button class="tb-btn" onclick="triggerFileLoad('new')">불러오기</button>
-  <button class="tb-btn" onclick="clearPane('new')">Clear</button>
+  <button class="tb-btn" onclick="clearPane('new')">비우기</button>
   <span class="lbl">Revised</span>
 </div>
 
