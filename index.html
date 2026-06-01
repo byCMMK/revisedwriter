@@ -69,12 +69,14 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
 /* ── 툴바 ── */
 #toolbar{
-  height:48px;background:var(--toolbar);border-bottom:2px solid var(--accent);
-  display:flex;align-items:center;padding:0 10px;gap:4px;
+  height:calc(48px + env(safe-area-inset-top));
+  padding-top:env(safe-area-inset-top);
+  background:var(--toolbar);border-bottom:2px solid var(--accent);
+  display:flex;align-items:center;padding-left:10px;padding-right:10px;gap:4px;
   z-index:200;flex-shrink:0;overflow-x:auto;overflow-y:hidden;
   position:relative;
 }
-#toolbar::-webkit-scrollbar{display:none;}
+  #toolbar::-webkit-scrollbar{display:none;}
 .app-title{font-family:'Barlow',sans-serif;color:var(--accent);font-size:20px;font-weight:800;font-style:italic;letter-spacing:-0.03em;margin-right:4px;user-select:none;flex-shrink:0;}
 .lbl{color:var(--lbl-color);font-size:10px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;}
 .sep{width:1px;height:20px;background:var(--sep);margin:0 4px;flex-shrink:0;}
