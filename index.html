@@ -391,10 +391,13 @@ document.addEventListener('pointerdown', e => {
 // ── 폰트·크기·줄간격 (index 연동 없음, 독립 설정) ────
 const REVISE_TYPO_KEY = 'revise-typo';
 function applyTypo(font, size, lh) {
+  const noWeightFonts = ['KoPub Batang Light', 'KoPub Batang Medium', 'KoPub Dotum Light', 'KoPub Dotum Medium'];
+  const isKoPub = noWeightFonts.some(f => font.includes(f));
   [editorOld, editorNew].forEach(el => {
-    el.style.fontFamily = font;
-    el.style.fontSize   = size + 'px';
-    el.style.lineHeight = lh;
+    el.style.fontFamily  = font;
+    el.style.fontSize    = size + 'px';
+    el.style.lineHeight  = lh;
+    el.style.fontWeight  = isKoPub ? 'normal' : '500';
   });
   const label = font.split(',')[0].replace(/'/g,'').trim();
   document.getElementById('sb-font').textContent = label + ' ' + size + 'px / ' + lh;
