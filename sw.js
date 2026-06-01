@@ -1,7 +1,7 @@
-const CACHE = 'revise-v2';
+const CACHE = 'revise-v3';
 
-self.addEventListener('install', e => {
-  self.skipWaiting();
+self.addEventListener('message', e => {
+  if (e.data === 'skipWaiting') self.skipWaiting();
 });
 
 self.addEventListener('activate', e => {
