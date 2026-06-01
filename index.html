@@ -346,11 +346,15 @@ body.chalkboard .pane-header{background:rgba(0,0,0,0.10);}
 <script>
 // ── Service Worker 등록 ───────────────────────────
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js').catch(() => {});
-}
-if (window.matchMedia('(display-mode: standalone)').matches ||
-    window.matchMedia('(display-mode: fullscreen)').matches) {
-  document.documentElement.requestFullscreen().catch(() => {});
+  navigator.serviceWorker.register('./sw.js').then(reg => {
+    reg.addEventListener('updatefound', () => {
+      reg.installing.addEventListener('statechange', () => {
+        if (reg.installing?.state === 'installed') {
+          reg.installing.postMessage('skipWaiting');
+        }
+      });
+    });
+  }).catch(() => {});
 }
   
 // ── 참조 ──────────────────────────────────────────
