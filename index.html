@@ -371,6 +371,8 @@ function applyColorMode(mode) {
   if (mode==='dark') document.body.classList.add('dark');
   else if (mode==='sepia') document.body.classList.add('sepia');
   else if (mode==='chalkboard') document.body.classList.add('chalkboard');
+  const toolbarColors = {light:'#1c2028', sepia:'#e4dac8', chalkboard:'#1e3532', dark:'#0c0e14'};
+  document.documentElement.style.background = toolbarColors[mode];
 }
 function applySystemDark() {
   applyColorMode(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
