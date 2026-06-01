@@ -1,4 +1,4 @@
-const CACHE = 'revise-v1';
+const CACHE = 'revise-v2';
 
 self.addEventListener('install', e => {
   self.skipWaiting();
