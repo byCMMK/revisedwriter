@@ -3,7 +3,7 @@
   "short_name": "REVISE",
   "description": "Original / Revised 듀얼 에디터",
   "start_url": "./",
-  "display": "fullscreen",
+  "display": "display",
   "background_color": "#1c2028",
   "theme_color": "#1c2028",
   "orientation": "landscape",
